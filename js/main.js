@@ -1,11 +1,12 @@
+// (function () {
+
 // Get array of all item prices
 
-function getPrices(items) {
-  var prices = items.filter(function(price){
-    return items.price;
-  });
-  return prices;
-};
+var prices = items.map( function(item){
+  return item.price;
+});
+
+console.log(prices);
 
 
 // Find Average Price
@@ -15,7 +16,9 @@ function findAvg(prices) {
     return (preVal + currVal);
   });
   var average = (sum / prices.length);
-  return 'The average price is ' + average + '.';
+  return 'The average price is $' + average.toFixed(2) + '.';
 };
 
 
+
+// }());
