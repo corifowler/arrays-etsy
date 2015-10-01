@@ -49,6 +49,22 @@ var answer2b = document.querySelector('#answer2b')
 var textNode2 = document.createTextNode(thirdItem);
 answer2b.appendChild(textNode2);
 
+// Which item has a "GBP" currency code? Display it's name and price.
+
+var gbpNamePrice = [];
+
+var filterByCurrency = items.forEach(function(x){
+  if (x.currency_code === 'GBP') {
+    gbpNamePrice.push(x.title + ' costs ' + x.price);
+  };
+});
+
+var gbpPhrase = gbpNamePrice[0];
+
+// Put answer on page
+var answer3 = document.querySelector('#answer3');
+var textNode = document.createTextNode(gbpPhrase);
+answer3.appendChild(textNode);
 
 
 
