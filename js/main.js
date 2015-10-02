@@ -18,9 +18,9 @@ var averageCon = average.toFixed(2);
 var avgString = 'The average price is $' + averageCon + '.'
 
 // Put answer on page
-// var answer1 = document.querySelector('#answer1');
-// var textNode = document.createTextNode(avgString);
-// answer1.appendChild(textNode);
+var answer1 = document.querySelector('#answer1');
+var textNode = document.createTextNode(avgString);
+answer1.appendChild(textNode);
 
 // Items between 14.00 and 18.00 - want item title based on price
 
@@ -117,12 +117,33 @@ var eightPlusMaterials = [];
 var findWood = items.filter(function(z){
   var mats = z.materials;
   if (mats.length >= 8) {
-    return eightPlusMaterials.push(z.title, mats.length, z.materials);
+    return eightPlusMaterials.push(z.title + ' has ' + mats.length + ' materials:', z.materials);
   };
   return eightPlusMaterials;
 });
 
 console.log(eightPlusMaterials);
+
+var eightOne = eightPlusMaterials[0];
+var eightTwo = eightPlusMaterials[1];
+var eightThree = eightPlusMaterials[2];
+var eightFour = eightPlusMaterials[3];
+
+var answer5 = document.querySelector('#answer5');
+var textNode = document.createTextNode(eightOne);
+answer5.appendChild(textNode);
+
+var answer5a = document.querySelector('#answer5a');
+var textNode = document.createTextNode(eightTwo);
+answer5a.appendChild(textNode);
+
+var answer5b = document.querySelector('#answer5b');
+var textNode = document.createTextNode(eightThree);
+answer5b.appendChild(textNode);
+
+var answer5c = document.querySelector('#answer5c');
+var textNode = document.createTextNode(eightFour);
+answer5c.appendChild(textNode);
 
 
 // }());
