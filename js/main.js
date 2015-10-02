@@ -1,4 +1,4 @@
-// (function () {
+(function () {
 
 // Get array of all item prices
 
@@ -55,7 +55,7 @@ var gbpNamePrice = [];
 
 var filterByCurrency = items.forEach(function(x){
   if (x.currency_code === 'GBP') {
-    gbpNamePrice.push(x.title + ' costs' + '&amp;#163;' + x.price);
+    gbpNamePrice.push(x.title + ' costs' + ' \u00A3' + x.price);
   };
 });
 
@@ -156,4 +156,4 @@ var textNode = document.createTextNode(finalAnswer);
 answer6.appendChild(textNode);
 
 
-// }());
+}());

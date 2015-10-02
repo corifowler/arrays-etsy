@@ -44,7 +44,7 @@ h2 {
 
 h2 span {
   background-color: #EEEEEE;
-  padding: 5px; }
+  padding: 15px; }
 
 h2 span::before {
   position: absolute;
@@ -53,5 +53,4 @@ h2 span::before {
   display: block;
   border-top: 2px solid #E6E6E6;
   content: '';
-  z-index: -1;
-  margin: 50px, 0; }
+  z-index: -1; }
