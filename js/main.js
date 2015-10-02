@@ -115,7 +115,6 @@ var eightPlusMaterials = [];
 var findEight = items.filter(function(z){
   var mats = z.materials;
   if (mats.length >= 8) {
-    // return eightPlusMaterials.push(z.title + ' has ' + mats.length + ' materials:', z.materials);
     return eightPlusMaterials.push(z);
   };
   return eightPlusMaterials;
