@@ -55,7 +55,7 @@ var gbpNamePrice = [];
 
 var filterByCurrency = items.forEach(function(x){
   if (x.currency_code === 'GBP') {
-    gbpNamePrice.push(x.title + ' costs' + '£' + x.price);
+    gbpNamePrice.push(x.title + ' costs' + '&amp;#163;' + x.price);
   };
 });
 
