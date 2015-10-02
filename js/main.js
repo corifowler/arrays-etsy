@@ -66,36 +66,63 @@ var answer3 = document.querySelector('#answer3');
 var textNode = document.createTextNode(gbpPhrase);
 answer3.appendChild(textNode);
 
-// Display all items
+// Display all items made of wood
 // isolate materials arrays
 // .indexOf materials
 // print out titles of items that match
-// use indexOf with filter!
 
-var titleMaterials = [];
+var thingsWithWood = [];
 
-var sortMaterials = items.forEach(function(x){
-  titleMaterials.push(x.materials, x.title);
-  return titleMaterials;
-});
-
-var findWood = titleMaterials.filter(function(y){
-  if (y.indexOf('wood') >= 0) {
-    return y.title;
+var findWood = items.filter(function(y){
+  var mats = y.materials;
+  if (mats.indexOf('wood') >= 0) {
+    return thingsWithWood.push(y.title + ' is made of wood.');
   };
+  return thingsWithWood;
 });
 
+console.log(thingsWithWood);
 
-// var findWood = function(materials) {
-//   var materials = items.forEach(function(x){
-//   return x.materials;
-//   });
-//   if (materials.indexOf('wood') >= 0) {
-//     var woodenItems = x.title;
-//   };
-//   return woodenItems;
-// };
+var firstWood = thingsWithWood[0];
+var secondWood = thingsWithWood[1];
+var thirdWood = thingsWithWood[2];
+var fourthWood = thingsWithWood[3];
+var fifthWood = thingsWithWood[4];
 
+var answer4 = document.querySelector('#answer4');
+var textNode = document.createTextNode(firstWood);
+answer4.appendChild(textNode);
+
+var answer4a = document.querySelector('#answer4a');
+var textNode = document.createTextNode(secondWood);
+answer4a.appendChild(textNode);
+
+var answer4b = document.querySelector('#answer4b');
+var textNode = document.createTextNode(thirdWood);
+answer4b.appendChild(textNode);
+
+var answer4c = document.querySelector('#answer4c');
+var textNode = document.createTextNode(fourthWood);
+answer4c.appendChild(textNode);
+
+var answer4d = document.querySelector('#answer4d');
+var textNode = document.createTextNode(fifthWood);
+answer4d.appendChild(textNode);
+
+// Which items are made of eight or more materials? 
+// Display the name, number of items and the items it is made of.
+
+var eightPlusMaterials = [];
+
+var findWood = items.filter(function(z){
+  var mats = z.materials;
+  if (mats.length >= 8) {
+    return eightPlusMaterials.push(z.title, mats.length, z.materials);
+  };
+  return eightPlusMaterials;
+});
+
+console.log(eightPlusMaterials);
 
 
 // }());
