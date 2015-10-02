@@ -145,5 +145,22 @@ var answer5c = document.querySelector('#answer5c');
 var textNode = document.createTextNode(eightFour);
 answer5c.appendChild(textNode);
 
+// How many items were made by their sellers?
+
+homemade = [];
+
+var whoMadeIt = items.filter(function(a){
+  var made = a.who_made;
+  if (made.indexOf('i_did') >= 0){
+    return homemade.push(a.who_made);
+  };
+});
+
+var finalAnswer = homemade.length + ' were made by their sellers.'
+
+var answer6 = document.querySelector('#answer6');
+var textNode = document.createTextNode(finalAnswer);
+answer6.appendChild(textNode);
+
 
 // }());
