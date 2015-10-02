@@ -124,7 +124,7 @@ var findEight = items.filter(function(z){
 
 eightPlusMaterials.forEach(function(a){
   var answer5 = document.querySelector('#answer5');
-  var textNode = document.createTextNode(a.title);
+  var textNode = document.createTextNode(a.title + ' has ' + a.materials.length + ' materials:');
   var linebreak = document.createElement('br');
   answer5.appendChild(textNode);
   answer5.appendChild(linebreak);
@@ -137,22 +137,6 @@ eightPlusMaterials.forEach(function(a){
   answer5.appendChild(linebreak2);
   });
 });
-
-// var answer5 = document.querySelector('#answer5');
-// var textNode = document.createTextNode(eightOne);
-// answer5.appendChild(textNode);
-
-// var answer5a = document.querySelector('#answer5a');
-// var textNode = document.createTextNode(eightTwo);
-// answer5a.appendChild(textNode);
-
-// var answer5b = document.querySelector('#answer5b');
-// var textNode = document.createTextNode(eightThree);
-// answer5b.appendChild(textNode);
-
-// var answer5c = document.querySelector('#answer5c');
-// var textNode = document.createTextNode(eightFour);
-// answer5c.appendChild(textNode);
 
 // How many items were made by their sellers?
 
