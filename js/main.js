@@ -81,8 +81,6 @@ var findWood = items.filter(function(y){
   return thingsWithWood;
 });
 
-console.log(thingsWithWood);
-
 var firstWood = thingsWithWood[0];
 var secondWood = thingsWithWood[1];
 var thirdWood = thingsWithWood[2];
@@ -114,36 +112,47 @@ answer4d.appendChild(textNode);
 
 var eightPlusMaterials = [];
 
-var findWood = items.filter(function(z){
+var findEight = items.filter(function(z){
   var mats = z.materials;
   if (mats.length >= 8) {
-    return eightPlusMaterials.push(z.title + ' has ' + mats.length + ' materials:', z.materials);
+    // return eightPlusMaterials.push(z.title + ' has ' + mats.length + ' materials:', z.materials);
+    return eightPlusMaterials.push(z);
   };
   return eightPlusMaterials;
 });
 
-console.log(eightPlusMaterials);
 
-var eightOne = eightPlusMaterials[0];
-var eightTwo = eightPlusMaterials[1];
-var eightThree = eightPlusMaterials[2];
-var eightFour = eightPlusMaterials[3];
+eightPlusMaterials.forEach(function(a){
+  var answer5 = document.querySelector('#answer5');
+  var textNode = document.createTextNode(a.title);
+  var linebreak = document.createElement('br');
+  answer5.appendChild(textNode);
+  answer5.appendChild(linebreak);
 
-var answer5 = document.querySelector('#answer5');
-var textNode = document.createTextNode(eightOne);
-answer5.appendChild(textNode);
+  a.materials.forEach(function(b){
+  var answer5a = document.querySelector('#answer5');
+  var textNode = document.createTextNode(b);
+  var linebreak2 = document.createElement('br');
+  answer5.appendChild(textNode);
+  answer5.appendChild(linebreak2);
+  });
+});
 
-var answer5a = document.querySelector('#answer5a');
-var textNode = document.createTextNode(eightTwo);
-answer5a.appendChild(textNode);
+// var answer5 = document.querySelector('#answer5');
+// var textNode = document.createTextNode(eightOne);
+// answer5.appendChild(textNode);
 
-var answer5b = document.querySelector('#answer5b');
-var textNode = document.createTextNode(eightThree);
-answer5b.appendChild(textNode);
+// var answer5a = document.querySelector('#answer5a');
+// var textNode = document.createTextNode(eightTwo);
+// answer5a.appendChild(textNode);
 
-var answer5c = document.querySelector('#answer5c');
-var textNode = document.createTextNode(eightFour);
-answer5c.appendChild(textNode);
+// var answer5b = document.querySelector('#answer5b');
+// var textNode = document.createTextNode(eightThree);
+// answer5b.appendChild(textNode);
+
+// var answer5c = document.querySelector('#answer5c');
+// var textNode = document.createTextNode(eightFour);
+// answer5c.appendChild(textNode);
 
 // How many items were made by their sellers?
 
