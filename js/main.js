@@ -66,6 +66,36 @@ var answer3 = document.querySelector('#answer3');
 var textNode = document.createTextNode(gbpPhrase);
 answer3.appendChild(textNode);
 
+// Display all items
+// isolate materials arrays
+// .indexOf materials
+// print out titles of items that match
+// use indexOf with filter!
+
+var titleMaterials = [];
+
+var sortMaterials = items.forEach(function(x){
+  titleMaterials.push(x.materials, x.title);
+  return titleMaterials;
+});
+
+var findWood = titleMaterials.filter(function(y){
+  if (y.indexOf('wood') >= 0) {
+    return y.title;
+  };
+});
+
+
+// var findWood = function(materials) {
+//   var materials = items.forEach(function(x){
+//   return x.materials;
+//   });
+//   if (materials.indexOf('wood') >= 0) {
+//     var woodenItems = x.title;
+//   };
+//   return woodenItems;
+// };
+
 
 
 // }());
